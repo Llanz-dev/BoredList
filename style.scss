@@ -1,0 +1,152 @@
+@import "color";
+@import "allFunctions";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $background-color;
+  font-family: "Roboto", sans-serif;
+}
+.lightBlack {
+  color: $lightBlack;
+}
+.show {
+  display: block;
+}
+.container {
+  background-color: white;
+  border-radius: 10px;
+  width: 40%;
+  margin: 2rem auto 0rem auto;
+  position: relative;
+  border-radius: 10px;
+  padding-bottom: 2rem;
+  // Date
+  header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(190, 190, 190);
+    span {
+      font-weight: 100;
+    }
+    .row {
+      @include horizontalDirection(center);
+      #day {
+        margin-left: 0.5rem;
+        font-weight: 100;
+      }
+    }
+  }
+  // Icons
+  .fa-plus {
+    cursor: pointer;
+    position: absolute;
+    top: 3.9rem;
+    right: 5rem;
+    padding: 1rem;
+    background-color: $blue;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: white;
+  }
+  .fa-trash {
+    // margin-left: 10px;
+    color: rgb(63, 63, 63);
+    font-size: 1.1rem;
+    cursor: pointer;
+    &:hover {
+      color: red;
+    }
+  }
+  .fa-edit {
+    @extend .fa-trash;
+    &:hover {
+      color: green;
+    }
+  }
+
+  // Input Field
+  section.input-container {
+    display: none;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: $blue;
+    padding: 1rem;
+    border-radius: 30px;
+    input {
+      border-radius: 15px;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      outline: none;
+      border: none;
+      background-color: rgb(240, 240, 240);
+    }
+  }
+
+  // Item List
+  section.item-list {
+    height: 60vh;
+    overflow: auto;
+    margin-top: 4rem;
+    .list {
+      padding: 10px 0;
+      // background-color: burlywood;
+      background-color: rgb(247, 247, 247);
+      border-bottom: 3px solid rgb(190, 190, 190);
+      &:hover {
+        background-color: rgb(244, 244, 244);
+      }
+      input {
+        margin-left: 10px;
+      }
+      .for-checkbox {
+        margin-left: 10px;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+      }
+      .itemEdit {
+        color: black;
+        font-size: 20px;
+        padding: 4px 6px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+      }
+      .for-itemEdit {
+        border: 1px solid black;
+      }
+    }
+    div {
+      @include horizontalDirection(center);
+      p {
+        font-size: 20px;
+      }
+      .thin {
+        font-weight: 100;
+      }
+      .finish {
+        color: rgb(94, 94, 94);
+        text-decoration: line-through;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        i {
+          font-weight: 900;
+          font-size: 20px;
+          margin: 0 2px;
+        }
+      }
+    }
+    .noList-message h1 {
+      margin: 0 auto;
+    }
+  }
+}

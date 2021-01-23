@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #008a6c;
+  font-family: "Roboto", sans-serif;
+}
+
+.lightBlack {
+  color: #3f3f3f;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  width: 40%;
+  margin: 2rem auto 0rem auto;
+  position: relative;
+  border-radius: 10px;
+  padding-bottom: 2rem;
+}
+
+.container header {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 3px solid #bebebe;
+}
+
+.container header span {
+  font-weight: 100;
+}
+
+.container header .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container header .row #day {
+  margin-left: 0.5rem;
+  font-weight: 100;
+}
+
+.container .fa-plus {
+  cursor: pointer;
+  position: absolute;
+  top: 3.9rem;
+  right: 5rem;
+  padding: 1rem;
+  background-color: #0059ff;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.container .fa-trash, .container .fa-edit {
+  color: #3f3f3f;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.container .fa-trash:hover, .container .fa-edit:hover {
+  color: red;
+}
+
+.container .fa-edit:hover {
+  color: green;
+}
+
+.container section.input-container {
+  display: none;
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  background-color: #0059ff;
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+.container section.input-container input {
+  border-radius: 15px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: #f0f0f0;
+}
+
+.container section.item-list {
+  height: 60vh;
+  overflow: auto;
+  margin-top: 4rem;
+}
+
+.container section.item-list .list {
+  padding: 10px 0;
+  background-color: #f7f7f7;
+  border-bottom: 3px solid #bebebe;
+}
+
+.container section.item-list .list:hover {
+  background-color: #f4f4f4;
+}
+
+.container section.item-list .list input {
+  margin-left: 10px;
+}
+
+.container section.item-list .list .for-checkbox {
+  margin-left: 10px;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+.container section.item-list .list .itemEdit {
+  color: black;
+  font-size: 20px;
+  padding: 4px 6px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.container section.item-list .list .for-itemEdit {
+  border: 1px solid black;
+}
+
+.container section.item-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container section.item-list div p {
+  font-size: 20px;
+}
+
+.container section.item-list div .thin {
+  font-weight: 100;
+}
+
+.container section.item-list div .finish {
+  color: #5e5e5e;
+  text-decoration: line-through;
+}
+
+.container section.item-list div .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container section.item-list div .col i {
+  font-weight: 900;
+  font-size: 20px;
+  margin: 0 2px;
+}
+
+.container section.item-list .noList-message h1 {
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */

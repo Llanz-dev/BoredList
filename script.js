@@ -26,14 +26,17 @@ const weekName = weekDays[currentDate.getDay()];
 document.getElementById("week").innerHTML = weekName + ",";
 document.getElementById("day").innerHTML = currentDate.getDate();
 document.getElementById("month").innerHTML = monthName;
+
 // Item List
 const plus_Icon = document.getElementById("plusIcon");
 const input_Field = document.getElementById("input-container");
 const input_Text = document.querySelector(".input-container input");
 const empty_Message = document.querySelector(".noList-message");
 const todo_Container = document.querySelector(".container");
+
 // When user click the plus icon
 plus_Icon.onclick = () => {
+
   // Showing the input field
   if (input_Field.style.display === "block") {
     input_Field.style.display = "none";
@@ -63,11 +66,8 @@ let itemCount = 0;
 // To show all the items that the user input
 let showItems = (userInput_Value) => {
   itemCount++;
-  if (itemCount > 0) {
+  if (itemCount === 0) empty_Message.style.display = "flex";
     empty_Message.style.display = "none";
-  } else {
-    empty_Message.style.display = "flex";
-  }
   // Creating a div tag
   const whole_Div = document.createElement("div");
   whole_Div.setAttribute("class", "list");
@@ -78,7 +78,7 @@ let showItems = (userInput_Value) => {
   const other_Div = document.createElement("div");
   // Creating a checkbox and item content (p tag)
   const checkbox_Tag = document.createElement("input");
-  checkbox_Tag.type = "checkbox";
+  checkbox_Tag.type = "checkbox";  
   checkbox_Tag.setAttribute("id", "checkBox" + itemCount);
   checkbox_Tag.classList.add("for-checkbox");
   const item_Tag = document.createElement("input");
@@ -115,13 +115,11 @@ let showItems = (userInput_Value) => {
   const itemCount_Show = document.getElementById("item-count");
   trash_Icon.onclick = () => {
     itemCount--;
+    if (itemCount === 0) empty_Message.style.display = "flex";      
+    if (itemCount > 0) empty_Message.style.display = "none";
     whole_Div.remove();
     itemCount_Show.innerHTML = itemCount + " Tasks";
-    if (itemCount > 0) {
-      empty_Message.style.display = "none";
-    } else {
-      empty_Message.style.display = "flex";
-    }
+   
   };
   // Aim to editing area of the items list
   edit_Icon.onclick = () => {
@@ -143,14 +141,8 @@ let showItems = (userInput_Value) => {
   itemCount_Show.innerHTML = itemCount + " Tasks";
   // checkbox function
   const checkbox = document.getElementById("checkBox" + itemCount);
-  let number = 1;
   checkbox.onclick = () => {
-    number++;
-    if (number % 2 === 0) {
-      item_Tag.style.color = "rgb(94, 94, 94)";
-    } else {
       item_Tag.style.color = "black";
-    }
-    item_Tag.classList.toggle("finish");
+      item_Tag.classList.toggle("finish");
   };
 };

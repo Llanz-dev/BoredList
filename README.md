@@ -3,7 +3,7 @@
 ## Description
 BoredList is a todo application without any kind of database even just local storage.
 
-- This can list down all your todo.
+- This can list down all your todo. It has edit and delete.
 - I use HTML, SCSS and JavaScript to make this project.
 
 ## How to Run the Project
@@ -22,7 +22,6 @@ Just clone this and open the **index.html**.
 ![none](screenshots/6.png?raw=true)
 #### Click the edit icon when you want to edit the title of your list.
 ![none](screenshots/8.png?raw=true)
-#### Click the edit icon when you want to edit the title of your list.
 
 ![open source](https://img.shields.io/badge/Open%20Source-%F0%9F%92%9A-white)
 ![GitHub contributors](https://img.shields.io/github/contributors/Llanz-dev/BoredList)

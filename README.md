@@ -7,6 +7,11 @@ BoredList is a todo application without any kind of database even just local sto
 - I use HTML, SCSS and JavaScript to make this project.
 
 ## How to Run the Project
+- HTML
+- SCSS
+- JavaScript
+
+## How to Run the Project
 Just clone this and open the **index.html**.
 
 ## How to Use the Project

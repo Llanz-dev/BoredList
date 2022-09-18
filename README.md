@@ -6,7 +6,7 @@ BoredList is a todo application without any kind of database even just local sto
 - This can list down all your todo. It has edit and delete.
 - I use HTML, SCSS and JavaScript to make this project.
 
-## How to Run the Project
+## Built With
 - HTML
 - SCSS
 - JavaScript
